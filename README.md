@@ -3,7 +3,7 @@ team-project-team19 created by GitHub Classroom
 
  Proposal report
  
-Team19 : 양박,윤세형,전성남,허위에,김청빈
+Team19 : 양박,윤세형,전성남,허위에,김청빈.
 § 프로젝트 주제 : 과일 이미지 인식 기술로 배달 웹사이트 만들기
 § 필요성
  
