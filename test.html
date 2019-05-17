@@ -1,8 +1,8 @@
-    <!DOCTYPE html>
+        <!DOCTYPE html>
     <html lang="ko">
     <head>
-       <!-- 내일은 버튼으로 설명서 생성+ 이벤트 리스너 공부 + 추가할거 있으면 추가하자. -->
-
+     
+    
        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,15 +27,21 @@
     </head>
     
 
-
+    
 
     <body>
             <h1 style="font-size: 80px; color:white;font-weight: 900;"><strong>Fruit Image Recognition System</strong></h1>
-          
-        
+            <h2 style="font-size: 20px; color:white;font-weight: 90;"><strong>구글 과일 쇼핑으로 바로가기<strong></strong></h2>
+           
+            <input type='button' onclick='banana()' value='바나나'/>
+            <input type='button' onclick='apple()' value='사과'/>
+            <input type='button' onclick='grape()' value='포도'/>
+            <input type='button' onclick='orange()' value='오렌지'/>
+            <input type='button' onclick='pineapple()' value='파인애플'/>
+
+            
             <h3 style="font-size: 40px; color:white; ;font-weight: 500;">   
                     Find fruit near you !(과일 어떤 걸로 할건지 팀19 카톡으로 5명이서 정하기 ex 사과,포도 등)
-                    
                 </h3>
         
             
@@ -46,22 +52,18 @@
 
              <style>
                 .row { font-size: 33px;color:white; }   
-                </style>            
+                </style>          
 
             <div class="button">
                             <input type="file" name="file" id="file-chooser" style="font-size: 30px; font-weight: 500;"><br>
-                            <button class="btn btn-primary btn-lg" id="upload-button" style="font-size: 30px; font-weight: 500;">업로드</button>
-
+                            <button class="btn btn-primary btn-lg" id="upload-button">Upload</button>
                         </div>     
-
-              
+                       
+                        <button id="사용법버튼" onclick="alertDialogBox()">도움말</button>  
              
              
              
-                        <div class="사용법">   
-                            <button id="사용법버튼">사용법(README)</button>   
-                             
-                            </div> 
+                        
 
                     <style>
                     #사용법버튼 { 
@@ -72,13 +74,41 @@
                         font-size:33px; 
                         font-weight:700; 
                     }
+
+
+
                     </style>   
                         
-                   
-                
-                        
+                        <script>
+                            function alertDialogBox() {
+                                alert(" 1. 과일 이미지 파일을 올리십시오(  ) \r\n 2. pytorch가 과일 이미지를 분류합니다 \r\n 3.pytorch가 인식한 결과를 바탕으로 배달 사이트로 넘어갑니다 \r\n 4.바로가기 누르면 바로 구글 배달 사이트로 넘어갑니다");
+                               
+                            }
+                            
+                            function banana(){
+ 
+ window.location.href="https://www.google.com/search?q=%EB%B0%94%EB%82%98%EB%82%98&hl=ko&source=lnms&tbm=shop&sa=X&ved=0ahUKEwirvpiwvqHiAhVHHKYKHdpzB2wQ_AUIEygA&biw=1188&bih=723";
+}
+                            function apple(){
+ window.location.href= "https://www.google.com/search?q=%EC%82%AC%EA%B3%BC&hl=ko&tbs=vw:l,ss:44&tbm=shop&ei=KxneXKjBGcqymAX2-7aYAQ&start=60&sa=N&ved=0ahUKEwjogrucv6HiAhVKGaYKHfa9DRM4FBDy0wMIqgM&biw=1188&bih=723";                              
+                            }
+                            function grape(){
+ window.location.href= "https://www.google.com/search?hl=ko&biw=1188&bih=723&tbm=shop&ei=LxneXPStNYe9mAW_4pfADQ&q=%ED%8F%AC%EB%8F%84&oq=%ED%8F%AC%EB%8F%84&gs_l=psy-ab.3..0l10.292820.293525.0.293783.4.4.0.0.0.0.136.347.1j2.3.0....0...1c.1j4.64.psy-ab..2.2.249....0.pH5fGl_Q2_o";
+                            }
+                            function orange(){
+ window.location.href= "https://www.google.com/search?tbm=shop&hl=ko&source=hp&biw=&bih=&q=%EC%98%A4%EB%A0%8C%EC%A7%80&oq=%EC%98%A4%EB%A0%8C%EC%A7%80&gs_l=products-cc.3...2251.3025.0.3240.7.6.0.1.0.1.127.625.3j3.6.0....0...1ac.1j4.34.products-cc..6.1.127.whZ1fDd2Dfk";                             
+                            }
+                            function pineapple(){
+ window.location.href="https://www.google.com/search?hl=ko&tbm=shop&ei=s5jeXLfsH8ra8QX5x7iACA&q=%ED%8C%8C%EC%9D%B8%EC%95%A0%ED%94%8C&oq=%ED%8C%8C%EC%9D%B8%EC%95%A0%ED%94%8C&gs_l=psy-ab.3..0.84527.85792.0.85873.10.7.0.1.1.0.256.697.0j3j1.4.0....0...1c.1j4.64.psy-ab..8.2.264...0i10k1.0.QYJrsWIRbeE"   
+                            }
+                            var button = document.getElementById('upload-button');
+		                    var results = document.getElementById('results');
+  
+                          
+                          
+                          
+                          
 
-                       
-
+                        </script>
     </body>
     </html>
