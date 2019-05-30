@@ -6,6 +6,7 @@ from keras.preprocessing.image import ImageDataGenerator
 from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten,Activation
 from keras.layers import Conv2D, MaxPooling2D, ZeroPadding2D, GlobalMaxPooling2D
+from keras.models import model_from_json
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg 
 from keras.utils import plot_model
@@ -74,6 +75,23 @@ model_cnn.compile(loss='categorical_crossentropy',
 print("train____________")
 model_cnn.fit(x_train, y_train,epochs=epochs,batch_size=128,)
 
+# save model & weight
+model_json = model_cnn.to_json()
+with open("model_cnn.json", "w") as json_file : 
+    json_file.write(model_json)
+model_cnn.save_weights("model_cnn.h5")
+print("Saved model")
+
+# load model & weight
+json_file = open("model_cnn.json", "r")
+loaded_model_json = json_file.read()
+json_file.close()
+loaded_model = model_from_json(loaded_model_json)
+
+loaded_model.load_weights("model_cnn.h5")
+print("Loaded model")
+
+# evaluation
 loss,acc=model_cnn.evaluate(x_train,y_train)
 print("loss=",loss)
 print("accuracy=",acc)
