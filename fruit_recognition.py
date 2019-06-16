@@ -67,6 +67,24 @@ model_cnn.add(Activation('softmax'))
 model_cnn.summary()
 opt = keras.optimizers.Adam(lr=0.0001)
 
+# Plot training & validation accuracy values
+plt.plot(history.history['acc'])
+# plt.plot(history.history['val_acc'])
+plt.title('Model accuracy')
+plt.ylabel('Accuracy')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Test'], loc='upper left')
+plt.show()
+
+# Plot training & validation loss values
+plt.plot(history.history['loss'])
+# plt.plot(history.history['val_loss'])
+plt.title('Model loss')
+plt.ylabel('Loss')
+plt.xlabel('Epoch')
+plt.legend(['Train', 'Test'], loc='upper left')
+plt.show()
+
 # train the model using RMSprop
 model_cnn.compile(loss='categorical_crossentropy',
                             optimizer=opt,
