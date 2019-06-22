@@ -1,7 +1,9 @@
 # team-project-team19
 team-project-team19 created by GitHub Classroom
 
- Proposal report
+ 
+o 참고
+ 홈페이지는 저희 팀 사정상 제외하게 되었으니 이미지 인식/분류 파이썬 코드만 보시면 됩니다.
  
 o 구현물에 대한 간단한 설명
 
